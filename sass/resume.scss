@@ -1,22 +1,17 @@
 //@import "compass/css3/columns";
 @import 'bourbon/bourbon';
 
-body{
-  
-
-  background: url('/images/body-bg.png') repeat-y;
-/*  background: url(1px.png) ;*/
-  background-size: 58.33333% auto;
-
-}
-
 // Typography
 
-abbr, abbr[title] {
-  border-bottom-color: #ddd;
+abbr {
   font-size: 100%; // override ZF 90% on abbr
   color: inherit;
+  border-bottom-width: 0;
+  &[title] {
+    border-bottom-color: #ddd;
+  }
 }
+
 
 .row .small-caps { 
   font-size: 90%; 
