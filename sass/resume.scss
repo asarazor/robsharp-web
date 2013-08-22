@@ -1,0 +1,149 @@
+//@import "compass/css3/columns";
+@import 'bourbon/bourbon';
+
+body{
+  
+
+  background: url('/images/body-bg.png') repeat-y;
+/*  background: url(1px.png) ;*/
+  background-size: 58.33333% auto;
+
+}
+
+// Typography
+
+abbr, abbr[title] {
+  border-bottom-color: #ddd;
+  font-size: 100%; // override ZF 90% on abbr
+  color: inherit;
+}
+
+.row .small-caps { 
+  font-size: 90%; 
+//  font-variant: small-caps;
+//  text-transform: lowercase;
+}
+
+
+@mixin c-head {
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@mixin d-head {
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1em;
+}
+
+
+.resume {
+  .title {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-family: 'Gotham SSm A', 'Gotham SSm B';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    margin: 2em 0 1em;
+  }
+  dl, dt, dd {
+     margin: 0;
+  }
+  h3 {
+    @include c-head;
+    margin-top: 2em;
+  }
+  .org-name, time {
+    @include d-head;
+  }
+  p {
+//    text-align: justify;
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;    
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+  p + p {
+    margin-top: 0;
+    text-indent: 25px;
+  }
+  
+  h4 {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    margin: 1em 0 -1em; /* Just for FF Mac: margins ignored when display:run-in works */
+    display:run-in;     /* Explore float:left if you start to care about FF Mac (apparently they alone literally don't like the spec, since CSS2.1!): */
+//  font-variant: small-caps;
+    text-transform: uppercase;
+    @extend .small-caps;
+  }
+  h4::after {
+    content: "\00A0\00A0\00A0\00A0";
+  }
+  
+  .meta span, .meta a {
+    @include d-head;
+  }
+  .experience {
+    &.columns {
+      border-right: 1px solid #ccc;
+    }
+    ol li { list-style-type: none;}
+    ol li:first-child h3 {
+      margin-top: 0;
+    }  
+  }
+  .non-experience {
+    .education-list dt, h3 {
+      @include c-head;
+    }
+    .education-list dt {
+      margin-top: 1em;
+    }
+    .education-list dd {
+      @include d-head;
+    }
+    h3 {
+      margin-top: 1em;
+    }
+    dt:first-child, h3:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+
+.experience {
+
+/* TODO: No decent column-span suppport yet on desktop (just IE10 & Opera as of 2013/08): http://quirksmode.org/css/columns/ & http://quirksmode.org/css/columns/mobile.html
+  .exp-columns {
+    &.span-all {
+      @include column-span(all);
+    }
+    &.columns {
+      @include column-count(2);
+      @include column-gap(2em);
+    }
+  }
+*/
+  
+  
+}

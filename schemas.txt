@@ -1,0 +1,10 @@
+http://schema.org/Person
+http://schema.org/PostalAddress
+http://schema.org/EducationEvent
+http://schema.org/CollegeOrUniversity
+
+http://schema.org/BusinessEvent
+http://schema.org/Organization | http://schema.org/Corporation
+
+http://schema.org/ItemList
+http://schema.org/Specialty
