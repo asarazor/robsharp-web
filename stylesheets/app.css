@@ -7228,21 +7228,21 @@ abbr[title] {
   border-bottom-color: #ddd;
 }
 
-/* line 16, ../sass/resume.scss */
+/* line 18, ../sass/resume.scss */
 .row .small-caps, .row .resume h4, .resume .row h4 {
   font-size: 90%;
 }
 
-/* line 41, ../sass/resume.scss */
+/* line 43, ../sass/resume.scss */
 .resume .title {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 2em;
   line-height: 1.6;
   margin-bottom: 0;
 }
-/* line 49, ../sass/resume.scss */
+/* line 51, ../sass/resume.scss */
 .resume h2 {
   font-family: 'Gotham SSm A', 'Gotham SSm B';
   font-weight: 300;
@@ -7252,11 +7252,11 @@ abbr[title] {
   line-height: 1.6;
   margin: 2em 0 1em;
 }
-/* line 58, ../sass/resume.scss */
+/* line 60, ../sass/resume.scss */
 .resume dl, .resume dt, .resume dd {
   margin: 0;
 }
-/* line 61, ../sass/resume.scss */
+/* line 63, ../sass/resume.scss */
 .resume h3 {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 700;
@@ -7266,28 +7266,31 @@ abbr[title] {
   margin-bottom: 0;
   margin-top: 2em;
 }
-/* line 65, ../sass/resume.scss */
+/* line 67, ../sass/resume.scss */
 .resume .org-name, .resume time {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
   font-style: italic;
   font-size: 1em;
 }
-/* line 68, ../sass/resume.scss */
-.resume p {
+/* line 70, ../sass/resume.scss */
+.resume p, .resume li {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
+}
+/* line 77, ../sass/resume.scss */
+.resume p {
   margin-bottom: 0;
   margin-top: 1em;
 }
-/* line 77, ../sass/resume.scss */
+/* line 81, ../sass/resume.scss */
 .resume p + p {
   margin-top: 0;
   text-indent: 25px;
 }
-/* line 82, ../sass/resume.scss */
+/* line 86, ../sass/resume.scss */
 .resume h4 {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
@@ -7299,30 +7302,35 @@ abbr[title] {
   /* Explore float:left if you start to care about FF Mac (apparently they alone literally don't like the spec, since CSS2.1!): */
   text-transform: uppercase;
 }
-/* line 93, ../sass/resume.scss */
+/* line 97, ../sass/resume.scss */
 .resume h4::after {
   content: "\00A0\00A0\00A0\00A0";
 }
-/* line 97, ../sass/resume.scss */
+/* line 102, ../sass/resume.scss */
+.resume .job-block ul {
+  list-style-position: outside;
+  margin: 1em 0;
+}
+/* line 106, ../sass/resume.scss */
+.resume .job-block li {
+  list-style-type: disc;
+}
+/* line 112, ../sass/resume.scss */
 .resume .meta span, .resume .meta a {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
   font-style: italic;
   font-size: 1em;
 }
-/* line 101, ../sass/resume.scss */
-.resume .experience.columns {
-  border-right: 1px solid #ccc;
-}
-/* line 104, ../sass/resume.scss */
-.resume .experience ol li {
+/* line 119, ../sass/resume.scss */
+.resume .experience ol > li {
   list-style-type: none;
 }
-/* line 105, ../sass/resume.scss */
-.resume .experience ol li:first-child h3 {
+/* line 120, ../sass/resume.scss */
+.resume .experience ol > li:first-child h3 {
   margin-top: 0;
 }
-/* line 110, ../sass/resume.scss */
+/* line 125, ../sass/resume.scss */
 .resume .non-experience .education-list dt, .resume .non-experience h3 {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 700;
@@ -7331,27 +7339,27 @@ abbr[title] {
   line-height: 1.6;
   margin-bottom: 0;
 }
-/* line 113, ../sass/resume.scss */
+/* line 128, ../sass/resume.scss */
 .resume .non-experience .education-list dt {
   margin-top: 1em;
 }
-/* line 116, ../sass/resume.scss */
+/* line 131, ../sass/resume.scss */
 .resume .non-experience .education-list dd {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
   font-style: italic;
   font-size: 1em;
 }
-/* line 119, ../sass/resume.scss */
+/* line 134, ../sass/resume.scss */
 .resume .non-experience h3 {
   margin-top: 1em;
 }
-/* line 122, ../sass/resume.scss */
+/* line 137, ../sass/resume.scss */
 .resume .non-experience dt:first-child, .resume .non-experience h3:first-child {
   margin-top: 0;
 }
 
-/* line 129, ../sass/resume.scss */
+/* line 144, ../sass/resume.scss */
 .experience {
   /* TODO: No decent column-span suppport yet on desktop (just IE10 & Opera as of 2013/08): http://quirksmode.org/css/columns/ & http://quirksmode.org/css/columns/mobile.html
     .exp-columns {

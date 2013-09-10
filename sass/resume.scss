@@ -13,6 +13,8 @@ abbr {
 }
 
 
+
+
 .row .small-caps { 
   font-size: 90%; 
 //  font-variant: small-caps;
@@ -40,7 +42,7 @@ abbr {
 .resume {
   .title {
     font-family: 'Mercury SSm A', 'Mercury SSm B';
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
     font-size: 2em;
     line-height: 1.6;
@@ -65,12 +67,14 @@ abbr {
   .org-name, time {
     @include d-head;
   }
-  p {
+  p, li {
 //    text-align: justify;
     font-family: 'Mercury SSm A', 'Mercury SSm B';
     font-weight: 400;
     font-style: normal;
     font-size: 1em;    
+  }
+  p {
     margin-bottom: 0;
     margin-top: 1em;
   }
@@ -94,15 +98,26 @@ abbr {
     content: "\00A0\00A0\00A0\00A0";
   }
   
+  .job-block {
+    ul {
+      list-style-position: outside;
+      margin: 1em 0;      
+    }
+    li {
+      list-style-type: disc;
+    }
+  }
+    
+    
   .meta span, .meta a {
     @include d-head;
   }
   .experience {
     &.columns {
-      border-right: 1px solid #ccc;
+//      border-right: 1px solid #ccc;
     }
-    ol li { list-style-type: none;}
-    ol li:first-child h3 {
+    ol>li { list-style-type: none;}
+    ol>li:first-child h3 {
       margin-top: 0;
     }  
   }
